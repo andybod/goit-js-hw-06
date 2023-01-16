@@ -6,10 +6,9 @@
 // В результаті, в консолі будуть виведені наступні повідомлення.
 
 const categories = document.querySelector("#categories");
-const category = categories.querySelectorAll(".item");
-const numberCategories = category.length;
-console.log("Number of categories: ", numberCategories);
+const category = categories.children;
+console.log("Number of categories: ", category.length);
 for (const elem of category) {
   console.log(`Category: ${elem.firstElementChild.textContent}`);
-  console.log(`Elements: ${elem.querySelectorAll("li").length}`);
+  console.log(`Elements: ${elem.lastElementChild.children.length}`);
 }
